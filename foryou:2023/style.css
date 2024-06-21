@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "supermagic";
+  src: url("assets/fonts/Cafe24Supermagic-Regular-v1.0.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "decoline";
+  src: url("assets/fonts/Cafe24Decoline.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fallinchild";
+  src: url("assets/fonts/ACC어린이가을담은체.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.5;
+  background: rgb(232, 243, 253);
+}
+
+.startpage_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #9400A5;
+}
+
+.startpage {
+  font-family: "fallinchild";
+  display:table;
+  table-layout:fixed;
+  text-align:center;
+  padding: 50px;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.ptitle {
+  font-family: "decoline";
+  font-weight: bold;
+}
+
+.wrapper {
+  font-family: "supermagic";
+  margin: 0 auto;
+  padding: 0 16.66% 50px;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.milestone {
+  margin-bottom: 0px;
+}
+
+p {
+  line-height: 1;
+  word-break: keep-all;
+  margin-bottom: 60px;
+}
+
+article {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.timeline__nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  transition: top 0.3s ease-out;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #bfc1c3;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #660094;
+  border-bottom: 1px dotted transparent;
+  transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
+}
