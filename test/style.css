@@ -1,0 +1,80 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* 수평 스크롤바 숨기기 */
+}
+
+:root {
+    --cards: 4;
+    --cardWidth: 87vw; /* 세로 높이 대신 가로 너비 */
+    --cardSidePadding: 1.5em; /* 상단 패딩 대신 측면 패딩 */
+    --cardMargin: 4vh; /* 수평 마진 대신 수직 마진 */
+}
+
+.container {
+    height: 90vh; /* 세로 스크롤바를 방지하기 위해 컨테이너 높이를 설정 */
+    margin: 0 auto;
+    display: flex; /* 수평 정렬을 위해 flexbox 사용 */
+    align-items: center; /* 컨테이너 내에서 수직 가운데 정렬 */
+}
+
+#cards {
+    list-style: none;
+    padding-top: 0%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(var(--cards), var(--cardWidth));
+    gap: var(--cardMargin);
+    padding-right: calc(var(--cards) * var(--cardSidePadding));
+    margin-right: var(--cardMargin);
+    height: 100%; /* 컨테이너 높이와 동일하게 설정 */
+}
+
+#card1 {
+    --index: 1;
+}
+
+#card2 {
+    --index: 2;
+}
+
+#card3 {
+    --index: 3;
+}
+
+#card4 {
+    --index: 4;
+}
+
+.card {
+    position: sticky;
+    left: 0; /* 가로 스크롤 고정 위치를 왼쪽으로 설정 */
+    padding-left: calc(var(--index) * var(--cardSidePadding));
+}
+
+#card1 .card-body {
+    background-color: #4f4f4f;
+}
+
+#card2 .card-body {
+    background-color: #464646;
+}
+
+#card3 .card-body {
+    background-color: #939393;
+}
+
+#card4 .card-body {
+    background-color: #0c0c0c;
+}
+
+.card-body {
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    width: var(--cardWidth); /* 카드의 너비를 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
