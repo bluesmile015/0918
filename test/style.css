@@ -35,7 +35,7 @@ body {
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
   width: 100%; /* 너비 설정 */
   aspect-ratio: 1 / 1;
-  background: repeating-radial-gradient(black, black 5px, #1C1C1C 6px, #1C1C1C 7px); /* 반지름 반복 배경 그라디언트 */
+  background: repeating-radial-gradient(black, black 1.9375%, #1C1C1C 2.325%, #1C1C1C 2.7125%); /* 반지름 반복 배경 그라디언트 */
   border-radius: 50%; /* 원형으로 만듦 */
 }
 
