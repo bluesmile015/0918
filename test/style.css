@@ -78,7 +78,7 @@ body {
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
   width: 100%; /* 너비 설정 */
   aspect-ratio: 1 / 1;
-  background: repeating-radial-gradient(black, black 5px, #1C1C1C 6px, #1C1C1C 7px); /* 반지름 반복 배경 그라디언트 */
+  background: repeating-radial-gradient(black, black 1.9375%, #1C1C1C 2.325%, #1C1C1C 2.7125%); /* 반지름 반복 배경 그라디언트 */
   border-radius: 50%; /* 원형으로 만듦 */
 }
 
@@ -91,8 +91,8 @@ body {
   display: block; /* 활성화 시 보임 */
   content: ''; /* 가상 요소 생성 */
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
-  width: 200px; /* 너비 설정 */
-  height: 200px; /* 높이 설정 */
+  width: 100%; /* 너비 설정 */
+  aspect-ratio: 1 / 1;
   background: linear-gradient(45deg, transparent, 40%, rgba(255,255,255,0.35), 60%, transparent); /* 45도 선형 그라디언트 */
   border-radius: 50%; /* 원형으로 만듦 */
 }
@@ -103,8 +103,8 @@ body {
   left: 50%; /* 부모 요소의 가운데 정렬 */
   top: 50%; /* 부모 요소의 가운데 정렬 */
   transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
-  width: 55px; /* 너비 설정 */
-  height: 55px; /* 높이 설정 */
+  width: 21.3125%; /* 너비 설정 */
+  aspect-ratio: 1 / 1;
   background: linear-gradient(white, white 50%, rgb(232, 243, 253) 50%, rgb(232, 243, 253)); /* 상하 50%씩 색상 변경된 선형 그라디언트 */
   border-radius: 50%; /* 원형으로 만듦 */
 }
@@ -115,8 +115,8 @@ body {
   left: 50%; /* 부모 요소의 가운데 정렬 */
   top: 50%; /* 부모 요소의 가운데 정렬 */
   transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
-  width: 10px; /* 너비 설정 */
-  height: 10px; /* 높이 설정 */
+  width: 3.875%; /* 너비 설정 */
+  aspect-ratio: 1 / 1;
   background: black; /* 배경 색상 설정 */
   border-radius: 50%; /* 원형으로 만듦 */
 }
