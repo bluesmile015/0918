@@ -46,6 +46,11 @@
     width: 100%; /* 카드 너비를 100%로 설정 */
     height: auto; /* 카드 높이를 자동으로 설정 */
   }
+
+  #card1::before {
+    left: 20%; /* 부모 요소의 가운데 정렬 */
+  
+  }
 }
 
 body{
@@ -402,7 +407,7 @@ body{
 #card3::before {
   content: 'null(2025)'; /* 가상 요소 생성 */
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
-  left: 60%; /* 부모 요소의 가운데 정렬 */
+  left: 65%; /* 부모 요소의 가운데 정렬 */
   top: 20%; /* 부모 요소의 가운데 정렬 */
   transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
   font-family: sans-serif; /* 폰트 설정 */
@@ -424,7 +429,7 @@ body{
 #card4::before {
   content: 'null(2026)'; /* 가상 요소 생성 */
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
-  left: 60%; /* 부모 요소의 가운데 정렬 */
+  left: 70%; /* 부모 요소의 가운데 정렬 */
   top: 20%; /* 부모 요소의 가운데 정렬 */
   transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
   font-family: sans-serif; /* 폰트 설정 */
