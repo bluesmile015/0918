@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   body {
     overflow-x: auto; /* 모바일에서는 가로 스크롤 허용 */
     overflow-y: auto; /* 세로 스크롤 허용 */
@@ -333,6 +333,14 @@ body{
   --index: 2;
 }
 
+#card3 {
+  --index: 3;
+}
+
+#card4 {
+  --index: 4;
+}
+
 .card {
   display: inline-block; /* 카드들을 가로로 정렬 */
   position: sticky;
@@ -371,6 +379,50 @@ body{
 
 #card2::before {
   content: '(2024)'; /* 가상 요소 생성 */
+  position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+  left: 60%; /* 부모 요소의 가운데 정렬 */
+  top: 20%; /* 부모 요소의 가운데 정렬 */
+  transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+  font-family: sans-serif; /* 폰트 설정 */
+  font-size: 25px; /* 폰트 크기 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px; /* 너비 설정 */
+  height: 40px; /* 높이 설정 */
+  background: white; /* 배경 색상 설정 */
+  border-radius: 5px; /* 둥근 모서리 설정 */
+}
+
+#card3 .card-body {
+  background-color: #000000;
+}
+
+#card3::before {
+  content: 'null(2025)'; /* 가상 요소 생성 */
+  position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+  left: 60%; /* 부모 요소의 가운데 정렬 */
+  top: 20%; /* 부모 요소의 가운데 정렬 */
+  transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+  font-family: sans-serif; /* 폰트 설정 */
+  font-size: 25px; /* 폰트 크기 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px; /* 너비 설정 */
+  height: 40px; /* 높이 설정 */
+  background: white; /* 배경 색상 설정 */
+  border-radius: 5px; /* 둥근 모서리 설정 */
+}
+
+#card4 .card-body {
+  background-color: #000000;
+}
+
+#card4::before {
+  content: 'null(2026)'; /* 가상 요소 생성 */
   position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
   left: 60%; /* 부모 요소의 가운데 정렬 */
   top: 20%; /* 부모 요소의 가운데 정렬 */
