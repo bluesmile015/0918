@@ -4,21 +4,21 @@ html {
 
 @font-face {
   font-family: "supermagic";
-  src: url("assets/fonts/Cafe24Supermagic-Regular-v1.0.woff2") format("woff2");
+  src: url("../asset/fonts/Cafe24Supermagic-Regular-v1.0.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "decoline";
-  src: url("assets/fonts/Cafe24Decoline.woff2") format("woff2");
+  src: url("../asset/fonts/Cafe24Decoline.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "fallinchild";
-  src: url("assets/fonts/ACC어린이가을담은체.woff2") format("woff2");
+  src: url("../asset/fonts/ACC어린이가을담은체.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }

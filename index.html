@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 필수는 og 태그 -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ForMyAir">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:url" content="https://formyair.netlify.app/index.html" />
-    <meta property="og:image" content="asset/thumbnail.png" /> 
-    <meta property="og:title" content="생일 축하해!!" /> 
-    <meta property="og:description" content="언제나 내게 가장 소중했고, 소중하고, 소중할, 너를 위해." />
-    <title>ForMyAir</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 필수는 og 태그 -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ForMyAir">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://formyair.netlify.app/index.html" />
+  <meta property="og:image" content="asset/thumbnail.png" /> 
+  <meta property="og:title" content="생일 축하해!!" /> 
+  <meta property="og:description" content="언제나 내게 가장 소중했고, 소중하고, 소중할, 너를 위해." />
+  <title>ForMyAir</title>
+  <link rel="stylesheet" href="./style.css"> <!-- CSS 파일 연결 -->
 </head>
-<body>
-    <a href="foryou(2023)/index.html" target="_blank">2023</a>
-    <a href="">(2024)</a>
-    <a href="test/index.html">test</a>
+<body> <!-- 본문 시작 -->
+  <!-- 턴테이블을 나타내는 div -->
+  <div class="turntable">
+    <!-- 레코드가 없을 때의 플래터를 나타내는 div -->
+    <div class="platter" id="platter"></div>
+    <!-- 레코드를 나타내는 div -->
+    <div class="record" id="record">
+      <!-- 오버레이를 나타내는 div (기능 및 스타일링을 위해) -->
+      <div class="overlay"></div>
+      <!-- 레코드의 안쪽 원을 나타내는 div -->
+      <div class="inner2023"></div>
+      <div class="inner2024"></div>
+    </div>
+    <!-- 턴테이블 팔의 홀더를 나타내는 div -->
+    <div class="arm-holder">
+      <!-- 턴테이블 팔을 나타내는 div -->
+      <div class="arm"></div>
+    </div>
+    <!-- 다이얼을 나타내는 div (기능 및 스타일링을 위해) -->
+    <div class="dial"></div>
+  </div>
+  <div class="container">
+    <ul id="cards">
+        <li class="card" id="card1">
+            <div class="card-body"></div>
+        </li>
+        <li class="card" id="card2">
+            <div class="card-body"></div>
+        </li>
+        <li class="card" id="card3">
+            <div class="card-body"></div>
+        </li>
+        <li class="card" id="card4">
+            <div class="card-body"></div>
+        </li>
+    </ul>
+</div>
 </body>
-</html>
-
-</body>
+<!-- 본문 끝 -->
+<!-- 스크립트를 포함한 본문 끝 -->
+<script src="./script.js"></script>
 </html>
