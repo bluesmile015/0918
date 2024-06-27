@@ -32,6 +32,42 @@ card2.addEventListener('click', function() {
     }, 1250);
 });
 
+card3.addEventListener('click', function() {
+    // record를 rectangle에서 platter 위치로 이동하는 애니메이션 적용
+    moveElement(record, platterLeft, 250); // 250ms 동안 이동
+    document.querySelector('.record').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+    document.querySelector('.inner2025').classList.toggle('active');
+    setTimeout(function() {
+        document.querySelector('.record').classList.toggle('webkit');
+    }, 250);
+    setTimeout(function() {
+        alert('준비중입니다! 다음에 만나요!');
+        document.querySelector('.record').classList.toggle('active');
+        document.querySelector('.overlay').classList.toggle('active');
+        document.querySelector('.inner2026').classList.toggle('active');
+        document.querySelector('.record').classList.toggle('webkit');
+    }, 1250);
+});
+
+card4.addEventListener('click', function() {
+    // record를 rectangle에서 platter 위치로 이동하는 애니메이션 적용
+    moveElement(record, platterLeft, 250); // 250ms 동안 이동
+    document.querySelector('.record').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+    document.querySelector('.inner2026').classList.toggle('active');
+    setTimeout(function() {
+        document.querySelector('.record').classList.toggle('webkit');
+    }, 250);
+    setTimeout(function() {
+        alert('준비중입니다! 다음에 만나요!');
+        document.querySelector('.record').classList.toggle('active');
+        document.querySelector('.overlay').classList.toggle('active');
+        document.querySelector('.inner2026').classList.toggle('active');
+        document.querySelector('.record').classList.toggle('webkit');
+    }, 1250);
+});
+
 // div를 이동시키는 함수
 function moveElement(element, to, duration) {
     var start = element.offsetLeft,
