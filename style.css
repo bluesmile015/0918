@@ -386,7 +386,7 @@ body {
 .card {
   display: inline-block; /* 인라인 블록으로 표시 */
   position: sticky; /* 스티키 포지션 설정 */
-  left: 12%; /* 왼쪽 정렬 */
+  left: 0%; /* 왼쪽 정렬 */
   padding-left: calc(var(--index) * var(--cardSidePadding)); /* 왼쪽 패딩 계산 */
   margin-right: var(--cardMargin); /* 오른쪽 마진 설정 */
   vertical-align: top; /* 상단 정렬 */
