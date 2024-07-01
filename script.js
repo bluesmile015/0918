@@ -28,7 +28,7 @@ card2.addEventListener('click', function() {
         document.querySelector('.record').classList.toggle('webkit');
     }, 250);
     setTimeout(function() {
-        location.href = '(2024)/index.html';
+        location.href = 'hi(2024)/index.html';
     }, 1250);
 });
 
