@@ -1,3 +1,15 @@
+// 서비스 워커 등록 코드
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }, function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+    });
+  }
+  
+// 추가적인 JavaScript 코드들...
 var record = document.getElementById('record'); // record div 요소 선택
 var card1 = document.getElementById('card1'); // card1 div 요소 선택
 var card2 = document.getElementById('card2'); // card2 div 요소 선택
