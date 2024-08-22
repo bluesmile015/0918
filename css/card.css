@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "decoline"; /* 폰트 이름 지정 */
+  src: url("../asset/fonts/Cafe24Decoline.woff2") format("woff2"); /* 폰트 파일 경로 및 형식 지정 */
+  font-weight: normal; /* 기본 폰트 두께 설정 */
+  font-style: normal; /* 기본 폰트 스타일 설정 */
+}
+
+#card1 {
+    --index: 1; /* 각 카드의 인덱스 설정 (1부터 4까지) */
+  }
+  
+  #card2 {
+    --index: 2;
+  }
+  
+  #card3 {
+    --index: 3;
+  }
+  
+  #card4 {
+    --index: 4;
+  }
+  
+  
+  /* #card1, #card2, #card3, #card4의 스타일은 유사하므로 #card1만 상세 설명 */
+  #card1 .card-body {
+    background-color: rgb(232, 243, 253); /* 배경색 설정 */
+  }
+  
+  #card1::before {
+    content: 'For You (2023)'; /* 가상 요소 내용 설정 */
+    position: absolute; /* 절대 위치 설정 */
+    left: 55%; /* 왼쪽에서 55% 위치에 배치 */
+    top: 20%; /* 위에서 20% 위치에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 위치 조정 */
+    font-family: 'decoline'; /* 폰트 설정 */
+    color: #9400A5; /* 글자색 설정 */
+    font-size: 25px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 굵기 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    width: 180px; /* 너비 설정 */
+    aspect-ratio: 18 / 4; /* 가로:세로 비율 설정 */
+    background: white; /* 배경색 설정 */
+    border-radius: 5px; /* 모서리 둥글게 처리 */
+  }
+  
+  #card2 .card-body {
+    background-color: #CC99FF;
+  }
+  
+  #card2::before {
+    content: '(2024)'; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 59%; /* 부모 요소의 가운데 정렬 */
+    top: 20%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 25px; /* 폰트 크기 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px; /* 너비 설정 */
+    aspect-ratio: 18 / 4;
+    background: white; /* 배경 색상 설정 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+  }
+  
+  #card3 .card-body {
+    background-color: gray;
+  }
+  
+  #card3::before {
+    content: '(2025)'; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 62%; /* 부모 요소의 가운데 정렬 */
+    top: 20%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 25px; /* 폰트 크기 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px; /* 너비 설정 */
+    aspect-ratio: 18 / 4;
+    background: white; /* 배경 색상 설정 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+  }
+  
+  #card4 .card-body {
+    background-color: gray;
+  }
+  
+  #card4::before {
+    content: '(2026)'; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 66%; /* 부모 요소의 가운데 정렬 */
+    top: 20%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 25px; /* 폰트 크기 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px; /* 너비 설정 */
+    aspect-ratio: 18 / 4;
+    background: white; /* 배경 색상 설정 */
+    border-radius: 5px; /* 둥근 모서리 설정 */
+  } 

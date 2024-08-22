@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "decoline"; /* 폰트 이름 지정 */
+  src: url("../asset/fonts/Cafe24Decoline.woff2") format("woff2"); /* 폰트 파일 경로 및 형식 지정 */
+  font-weight: normal; /* 기본 폰트 두께 설정 */
+  font-style: normal; /* 기본 폰트 스타일 설정 */
+}
+
+body {
+  background: #E6CCFF; /* 배경색을 어두운 청록색으로 설정 223640 */
+  overflow-x: hidden; /* 가로 스크롤바 숨김 */
+  overflow-y: hidden; /* 세로 스크롤바 숨김 */
+}
+
+.turntable {
+  position: relative; /* 자식 요소의 기준점 역할 */
+  margin: auto; /* 가운데 정렬 */
+  display: block; /* 블록 레벨 요소로 설정 */
+  margin-top: 12%; /* 위쪽 여백 12% 설정 */
+  margin-bottom: 8%; /* 아래쪽 여백 8% 설정 */
+  width: 310px; /* 너비 310px로 설정 */
+  aspect-ratio: 31 / 28; /* 가로:세로 비율을 31:28로 설정 */
+  background: #CC99FF; /* 배경색을 연한 보라색으로 설정 */
+  border-radius: 5%; /* 모서리를 5% 둥글게 처리 */
+  box-shadow: inset 0 0 10px rgba(255,255,255,0.7); /* 내부 그림자 효과 추가 */
+  box-shadow: #1c1c1c55 0 0 15px;
+}
+
+.platter {
+  position: absolute; /* 절대 위치 지정 */
+  left: 35px; /* 왼쪽에서 35px 떨어짐 */
+  top: 35px; /* 위에서 35px 떨어짐 */
+  width: 200px; /* 너비 200px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: black; /* 배경색을 검정으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.platter::before {
+  content: ''; /* 가상 요소 생성 */
+  left: 50%; /* 왼쪽에서 50% 위치 */
+  top: 50%; /* 위에서 50% 위치 */
+  transform: translate(-50%, -50%); /* 정중앙 정렬 */
+  position: absolute; /* 절대 위치 지정 */
+  width: 180px; /* 너비 180px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: repeating-radial-gradient(black, black 5px, #1C1C1C 6px, #1C1C1C 7px); /* 반복되는 방사형 그라데이션 배경 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.record {
+  display: none; /* 기본적으로 숨김 처리 */
+  z-index: 1; /* 쌓임 순서 지정 */
+  position: absolute; /* 절대 위치 지정 */
+  left: 35px; /* 왼쪽에서 35px 떨어짐 */
+  top: 35px; /* 위에서 35px 떨어짐 */
+  width: 200px; /* 너비 200px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: black; /* 배경색을 검정으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.record.active {
+  display: block; /* 활성화 시 보이도록 설정 */
+}
+
+.record.webkit {
+  -webkit-animation: spin 1s infinite linear; /* 웹킷 브라우저용 회전 애니메이션 */
+          animation: spin 1s infinite linear; /* 표준 회전 애니메이션 */        
+}
+
+@keyframes spin {
+  0% {
+    transform: none; /* 시작 상태 */
+  }
+  100% {
+    transform: rotate(360deg); /* 360도 회전 */
+  }
+}
+
+.record::before {
+  content: ''; /* 가상 요소 생성 */
+  left: 50%; /* 왼쪽에서 50% 위치 */
+  top: 50%; /* 위에서 50% 위치 */
+  transform: translate(-50%, -50%); /* 정중앙 정렬 */
+  position: absolute; /* 절대 위치 지정 */
+  width: 180px; /* 너비 180px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: repeating-radial-gradient(black, black 5px, #1C1C1C 6px, #1C1C1C 7px); /* 반복되는 방사형 그라데이션 배경 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.overlay {
+  display: none; /* 기본적으로 숨김 처리 */
+  z-index: 1; /* 쌓임 순서 지정 */
+}
+
+.overlay.active {
+  display: block; /* 활성화 시 보이도록 설정 */
+  content: ''; /* 가상 요소 생성 */
+  position: absolute; /* 절대 위치 지정 */
+  width: 200px; /* 너비 200px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: linear-gradient(45deg, transparent, 40%, rgba(255,255,255,0.35), 60%, transparent); /* 45도 각도의 선형 그라데이션 배경 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.arm-holder {
+  position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+  width: 40px; /* 너비 40px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: gray; /* 배경색을 회색으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+  right: 20px; /* 오른쪽에서 20px 떨어진 위치에 배치 */
+  top: 40px; /* 위에서 40px 떨어진 위치에 배치 */
+  z-index: 1; /* 쌓임 순서를 1로 설정 (다른 요소 위에 표시) */
+}
+
+.arm-holder::after {
+  content: ''; /* 가상 요소 생성 */
+  position: absolute; /* 부모 요소(.arm-holder)를 기준으로 절대 위치 설정 */
+  top: 50%; /* 세로 중앙 정렬 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translate(-50%, -50%); /* 정확한 중앙 정렬을 위한 위치 조정 */
+  width: 30px; /* 너비 30px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: #939393; /* 배경색을 밝은 회색으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.arm {
+  position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+  right: 13px; /* 오른쪽에서 13px 떨어진 위치에 배치 */
+  top: 10px; /* 위에서 10px 떨어진 위치에 배치 */
+  width: 60px; /* 너비 60px로 설정 */
+  aspect-ratio: 6 / 11; /* 가로:세로 비율을 6:11로 설정 */
+  border: 10px solid #939393; /* 10px 두께의 실선 테두리 설정 (밝은 회색) */
+  transform: skew(-20deg, -20deg); /* X축과 Y축으로 -20도씩 기울임 효과 적용 */
+  transform-origin: top right; /* 변환 기준점을 오른쪽 상단으로 설정 */
+  border-left-color: transparent; /* 왼쪽 테두리 색상을 투명하게 설정 */
+  border-top-color: transparent; /* 위쪽 테두리 색상을 투명하게 설정 */
+  border-radius: 0 0 30% 0; /* 오른쪽 하단 모서리만 30% 둥글게 처리 */
+}
+
+.arm::before {
+  content: ''; /* 가상 요소 생성 */
+  position: absolute; /* 부모 요소(.arm)를 기준으로 절대 위치 설정 */
+  width: 20px; /* 너비 20px로 설정 */
+  aspect-ratio: 2 / 3; /* 가로:세로 비율을 2:3으로 설정 */
+  background: gray; /* 배경색을 회색으로 설정 */
+  transform: skew(20deg, 20deg) rotate(75deg); /* X축과 Y축으로 20도씩 기울이고 75도 회전 */
+  top: 98px; /* 위에서 98px 떨어진 위치에 배치 */
+  left: -10px; /* 왼쪽에서 -10px 위치에 배치 (왼쪽으로 10px 이동) */
+  border-radius: 20%; /* 모서리를 20% 둥글게 처리 */
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%); /* 웹킷 브라우저용 다각형 클리핑 경로 설정 */
+          clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%); /* 다각형 클리핑 경로 설정 */
+}
+
+.dial {
+  position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+  bottom: 20px; /* 아래에서 20px 떨어진 위치에 배치 */
+  right: 20px; /* 오른쪽에서 20px 떨어진 위치에 배치 */
+  width: 25px; /* 너비 25px로 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  background: #333642; /* 배경색을 어두운 회색으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+.dial::before {
+  content: ''; /* 가상 요소 생성 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translateX(-50%); /* 정확한 가로 중앙 정렬을 위한 위치 조정 */
+  top: 2px; /* 위에서 2px 떨어진 위치에 배치 */
+  position: absolute; /* 부모 요소(.dial)를 기준으로 절대 위치 설정 */
+  width: 2px; /* 너비 2px로 설정 */
+  aspect-ratio: 2 / 5; /* 가로:세로 비율을 2:5로 설정 */
+  background: gray; /* 배경색을 회색으로 설정 */
+  border-radius: 50%; /* 원형으로 만듦 */
+}
+
+:root {
+  --cards: 4; /* 카드 개수 설정 */
+  --cardWidth: 220px; /* 카드 너비 설정 */
+  --cardSidePadding: 1.5em; /* 카드 측면 패딩 설정 */
+  --cardMargin: 220px; /* 카드 간 마진 설정 */
+}
+
+.container {
+  height: 100%; /* 컨테이너 높이를 100%로 설정 */
+  overflow-x: scroll; /* 가로 스크롤 허용 */
+  white-space: nowrap; /* 줄바꿈 방지 */
+  display: flex; /* flexbox 사용 */
+  align-items: center; /* 세로 중앙 정렬 */
+  scroll-snap-type: x mandatory; /* 가로 스크롤 스냅 적용 */
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+#cards {
+  list-style: none; /* 리스트 스타일 제거 */
+  padding-top: 0; /* 위쪽 패딩 제거 */
+  display: inline-block; /* 인라인 블록으로 표시 */
+  white-space: nowrap; /* 줄바꿈 방지 */
+  margin: 0; /* 마진 제거 */
+  padding: 0; /* 패딩 제거 */
+}
+
+.card {
+  display: inline-block; /* 인라인 블록으로 표시 */
+  position: sticky; /* 스티키 포지션 설정 */
+  left: 0%; /* 왼쪽 정렬 */
+  padding-left: calc(var(--index) * var(--cardSidePadding)); /* 왼쪽 패딩 계산 */
+  margin-right: var(--cardMargin); /* 오른쪽 마진 설정 */
+  vertical-align: top; /* 상단 정렬 */
+  scroll-snap-align: start; /* 스크롤 스냅 정렬 시작점 설정 */
+}
+
+.card-body {
+  box-sizing: border-box; /* 박스 크기 계산 방식 설정 */
+  padding: 30px; /* 내부 여백 설정 */
+  border-radius: 50px; /* 모서리 둥글게 처리 */
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3); /* 그림자 효과 설정 */
+  width: var(--cardWidth); /* 카드 너비 설정 */
+  aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+  display: flex; /* flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  border-radius: 5px; /* 모서리 둥글게 처리 */
+}

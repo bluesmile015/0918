@@ -1,7 +1,7 @@
 // 서비스 워커 등록 코드
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
         console.log('Service Worker registered with scope:', registration.scope);
       }, function(error) {
         console.log('Service Worker registration failed:', error);
@@ -26,7 +26,7 @@ card1.addEventListener('click', function() {
         document.querySelector('.record').classList.toggle('webkit');
     }, 250);
     setTimeout(function() {
-        location.href = 'foryou(2023)/index.html';
+        location.href = '../../pages/foryou(2023)/index.html';
     }, 1250);
 });
 
@@ -40,7 +40,7 @@ card2.addEventListener('click', function() {
         document.querySelector('.record').classList.toggle('webkit');
     }, 250);
     setTimeout(function() {
-        location.href = 'hi(2024)/index.html';
+        location.href = '../../pages/hi(2024)/index.html';
     }, 1250);
 });
 

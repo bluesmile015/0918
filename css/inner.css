@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "decoline"; /* 폰트 이름 지정 */
+  src: url("../asset/fonts/Cafe24Decoline.woff2") format("woff2"); /* 폰트 파일 경로 및 형식 지정 */
+  font-weight: normal; /* 기본 폰트 두께 설정 */
+  font-style: normal; /* 기본 폰트 스타일 설정 */
+}
+
+.inner2023 {
+    display: none; /* 기본적으로 숨김 처리 */
+    position: absolute; /* 절대 위치 지정 */
+    left: 50%; /* 왼쪽에서 50% 위치 */
+    top: 50%; /* 위에서 50% 위치 */
+    transform: translate(-50%, -50%); /* 정중앙 정렬 */
+    width: 55px; /* 너비 55px로 설정 */
+    aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+    background: linear-gradient(white, white 50%, rgb(232, 243, 253) 50%, rgb(232, 243, 253)); /* 상하 반반 그라데이션 배경 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2023::before {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute; /* 절대 위치 지정 */
+    left: 50%; /* 왼쪽에서 50% 위치 */
+    top: 50%; /* 위에서 50% 위치 */
+    transform: translate(-50%, -50%); /* 정중앙 정렬 */
+    width: 10px; /* 너비 10px로 설정 */
+    aspect-ratio: 1 / 1; /* 가로:세로 비율을 1:1로 설정 (정사각형) */
+    background: black; /* 배경색을 검정으로 설정 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2023::after {
+    content: 'For You'; /* 텍스트 내용 설정 */
+    width: 55px; /* 너비 55px로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-family: 'decoline'; /* 폰트 설정 */
+    color: #9400A5; /* 텍스트 색상 설정 */
+    font-weight: bold; /* 폰트 굵기 설정 */
+    font-size: 8px; /* 폰트 크기 8px로 설정 */
+    position: absolute; /* 절대 위치 지정 */
+    left: 50%; /* 왼쪽에서 50% 위치 */
+    top: 10px; /* 위에서 10px 떨어짐 */
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+  }
+  
+  .inner2023.active {
+    display: block; /* 활성화 시 보이도록 설정 */
+  }
+  
+  .inner2024 {
+    display: none;
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 55px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(white, white 50%, #CC99FF 50%, #CC99FF); /* 상하 50%씩 색상 변경된 선형 그라디언트 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2024::before {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 10px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: black; /* 배경 색상 설정 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2024::after {
+    content: '(2024)'; /* 텍스트 내용 설정 */
+    width: 55px; /* 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 8px; /* 폰트 크기 설정 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 10px; /* 위에서 10px 떨어짐 */
+    transform: translateX(-50%); /* X축 가운데 정렬 보정 */
+  }
+  
+  .inner2024.active {
+    display: block; /* 활성화 시 보임 */
+  }
+  
+  .inner2025 {
+    display: none;
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 55px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(white, white 50%, gray 50%, gray); /* 상하 50%씩 색상 변경된 선형 그라디언트 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2025::before {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 10px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: black; /* 배경 색상 설정 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2025::after {
+    content: '(2025)'; /* 텍스트 내용 설정 */
+    width: 55px; /* 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 8px; /* 폰트 크기 설정 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 10px; /* 위에서 10px 떨어짐 */
+    transform: translateX(-50%); /* X축 가운데 정렬 보정 */
+  }
+  
+  .inner2025.active {
+    display: block; /* 활성화 시 보임 */
+  }
+  
+  .inner2026 {
+    display: none;
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 55px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(white, white 50%, gray 50%, gray); /* 상하 50%씩 색상 변경된 선형 그라디언트 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2026::before {
+    content: ''; /* 가상 요소 생성 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 50%; /* 부모 요소의 가운데 정렬 */
+    transform: translate(-50%, -50%); /* 가운데 정렬 보정 */
+    width: 10px; /* 너비 설정 */
+    aspect-ratio: 1 / 1;
+    background: black; /* 배경 색상 설정 */
+    border-radius: 50%; /* 원형으로 만듦 */
+  }
+  
+  .inner2026::after {
+    content: '(2026)'; /* 텍스트 내용 설정 */
+    width: 55px; /* 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-family: sans-serif; /* 폰트 설정 */
+    font-size: 8px; /* 폰트 크기 설정 */
+    position: absolute; /* 부모 요소를 기준으로 절대 위치 설정 */
+    left: 50%; /* 부모 요소의 가운데 정렬 */
+    top: 10px; /* 위에서 10px 떨어짐 */
+    transform: translateX(-50%); /* X축 가운데 정렬 보정 */
+  }
+  
+  .inner2026.active {
+    display: block; /* 활성화 시 보임 */
+  }
+  

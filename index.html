@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--manifest-->
+  <link rel="manifest" href="/manifest.json">
   <!-- 필수는 og 태그 -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ForMyAir">
@@ -13,8 +15,10 @@
   <meta property="og:title" content="생일 축하해!!" /> 
   <meta property="og:description" content="언제나 내게 가장 소중했고, 소중하고, 소중할, 너를 위해." />
   <title>ForMyAir</title>
-  <link rel="stylesheet" href="./style.css"> <!-- CSS 파일 연결 -->
-  <link rel="manifest" href="/manifest.json">
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/inner.css">
+  <link rel="stylesheet" href="css/card.css">  
 </head>
 <body> <!-- 본문 시작 -->
   <!-- 턴테이블을 나타내는 div -->
@@ -26,10 +30,12 @@
       <!-- 오버레이를 나타내는 div (기능 및 스타일링을 위해) -->
       <div class="overlay"></div>
       <!-- 레코드의 안쪽 원을 나타내는 div -->
-      <div class="inner2023"></div>
-      <div class="inner2024"></div>
-      <div class="inner2025"></div>
-      <div class="inner2026"></div>
+      <div class="inner">
+        <div class="inner2023"></div>
+        <div class="inner2024"></div>
+        <div class="inner2025"></div>
+        <div class="inner2026"></div>
+      </div>
     </div>
     <!-- 턴테이블 팔의 홀더를 나타내는 div -->
     <div class="arm-holder">
@@ -39,6 +45,8 @@
     <!-- 다이얼을 나타내는 div (기능 및 스타일링을 위해) -->
     <div class="dial"></div>
   </div>
+  <br>
+  <br>
   <div class="container">
     <ul id="cards">
         <li class="card" id="card1">
@@ -58,5 +66,5 @@
 </body>
 <!-- 본문 끝 -->
 <!-- 스크립트를 포함한 본문 끝 -->
-<script src="./script.js"></script>
+<script src="js/script.js"></script>
 </html>
