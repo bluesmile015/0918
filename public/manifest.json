@@ -2,7 +2,7 @@
   "name": "For My Air",
   "short_name": "FormyAir.io",
   "description": "This is my awesome progressive web app!",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "minimal-ui",
   "offline_enabled": true,
   "background_color": "#E6CCFF",
