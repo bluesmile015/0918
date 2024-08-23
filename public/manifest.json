@@ -1,14 +1,11 @@
 {
-  "manifest_version": 2,
   "name": "For My Air",
   "short_name": "FormyAir.io",
-  "id": "FormyAir",
   "description": "This is my awesome progressive web app!",
   "start_url": "/index.html",
-  "display": "standalone",
+  "display": "minimal-ui",
   "offline_enabled": true,
   "background_color": "#E6CCFF",
-  "theme_color": "#E6CCFF",
   "icons": [
     {
       "src": "asset/icons/icon-192-maskable.png",
